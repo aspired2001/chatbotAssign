@@ -1,10 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+
+cd asignt
+
+npm install
+
 npm run dev
 # or
 yarn dev
@@ -13,24 +17,56 @@ pnpm dev
 # or
 bun dev
 ```
+## File Structure
+
+```
+├── pages/
+│   ├── _app.tsx
+│   └── index.tsx
+├── public/
+│   └── favicon.ico
+├── components/
+│   ├── Chatbot.tsx
+│   ├── Loader.tsx
+│   └── Loading.tsx
+├── styles/
+│   └── globals.css
+├── README.md
+├── package.json
+└── tsconfig.json
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## About this CHATBOT project
 
-## Learn More
+Tech stacks used: Next.Js, TailwindCSS, Typescript.
 
-To learn more about Next.js, take a look at the following resources:
+## Key Files:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+pages/index.tsx: The main entry point for the application, rendering the Chatbot component.
+components/Chatbot.tsx: The primary chat interface component, handling user input, message display, and bot responses.
+components/Loader.tsx: Displays an animated loader while waiting for the bot's initial load.
+components/Loading.tsx: Shows an animated loading dots component between the user’s query and the bot’s response.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Key Components
 
-## Deploy on Vercel
+Chatbot.tsx
+State Management: Uses useState and useEffect hooks to manage user input, messages, and loading states.
+Predefined Responses: Contains predefined responses to certain queries.
+Dynamic Message Display: Messages are displayed in a reverse order, with new messages appearing at the bottom and moving upward as the chat grows.
+Loading Indicator: A loading animation is shown between sending a message and receiving the bot’s response.
+Loader.tsx and Loading.tsx
+Loader.tsx: Displays an animated infinity symbol during the initial loading phase.
+Loading.tsx: Shows a bouncing dots animation while the bot processes and returns a response to the user's query.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Assumptions and Limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Assumptions:
+The chatbot currently only handles a limited set of predefined queries.
+The user input is expected to match the predefined questions exactly for a proper response.
+Limitations:
+Static Responses: The bot doesn't have an AI backend; it only responds to predefined questions. This limits the bot's functionality to specific queries.
+No Backend Integration: The application doesn't support external APIs or backend systems for storing chat history or enhancing bot intelligence.
