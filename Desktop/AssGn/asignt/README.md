@@ -83,3 +83,11 @@ bun dev
   <li><strong>Static Responses:</strong> The bot doesn't have an AI backend; it only responds to predefined questions. This limits the bot's functionality to specific queries.</li>
   <li><strong>No Backend Integration:</strong> The application doesn't support external APIs or backend systems for storing chat history or enhancing bot intelligence.</li>
 </ul>
+
+<h2>Questions to Ask the Chatbot</h2>
+<ul>
+  <li><strong>What services do you offer?</strong></li>
+  <li><strong>How can I contact support?</strong></li>
+  <li><strong>What's your name?</strong></li>
+  <li><strong>What song was or do you want to be the your first dance at your wedding?</strong></li>
+</ul>
