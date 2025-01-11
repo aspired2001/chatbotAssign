@@ -78,7 +78,7 @@ const Chatbot: React.FC = () => {
                 className={`inline-block px-4 py-8 rounded-[2rem] text-left font-semibold ${
                   message.sender === "user"
                     ? "bg-black text-white h-[8rem] max-h-[8rem] max-w-[20rem]"
-                    : "bg-white text-black h-[8rem] max-h-[8rem] max-w-[20rem]"
+                    : "bg-white text-black h-[rem] max-h-[8rem] max-w-[20rem]"
                 }`}
               >
                 {message.content}
